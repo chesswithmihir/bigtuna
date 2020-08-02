@@ -1,0 +1,61 @@
+<h2>Graham Intrinsic Value Table</h2>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Company</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>Microsoft</td>
+        <td>{{MSFT_piv}}</td>
+      </tr>
+      <tr>
+        <td>Facebook</td>
+        <td>{{FB_piv}}</td>
+      </tr>
+      <tr>
+        <td>Amazon</td>
+        <td>{{AMZN_piv}}</td>
+      </tr>
+      <tr>
+        <td>Google</td>
+        <td>{{GOOG_piv}}</td>
+      </tr>
+      <tr>
+        <td>Apple</td>
+        <td>{{AAPL_piv}}</td>
+      </tr>
+    </table>
+
+<!--
+    <form method="get" action="/stocks">
+      <button type="submit">Continue</button>
+  </form>
+
+
+  <form action="/stocks">
+    <input type="submit" value="Go to Google" />
+</form> -->
+  </body>
+</html>

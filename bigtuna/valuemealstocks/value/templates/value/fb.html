@@ -1,0 +1,286 @@
+{% load static %}
+
+
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Facebook</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'value/assets/css/main.css' %}"/>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161583161-2"></script>
+		<link rel="icon" type="image/png" href="{% static 'value/images/logo.png' %}"/>
+
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-161583161-2');
+        </script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<!-- Header -->
+								<header id="header">
+									<a href="{% url 'home' %}" class="logo"><strong>Facebook</strong> by Value Meal Stocks</a>
+									<ul class="icons">
+										<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li> -->
+										<li><a href="http://instagram.com/chesswithmihir" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<!-- <li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li> -->
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Facebook</h1>
+									</header>
+									<span class="image main"><img src="{% static 'value/images/fb.png' %}" alt="" /></span>
+									<h3>Description</h3>
+
+									<p>Facebook is a growth company that produces revenue mainly from advertisements. They are also famous for WhatsApp and Instagram. This company grows strong because of its popularity in networking. It currently holds 1 billion users and 1 billion people and a couple of ads can make a lot of money, specifically, Facebook's Revenue.</p>
+
+									<hr class = "major" />
+
+									<!-- Table -->
+													<h3>Valuations</h3>
+
+													<div class="table-wrapper">
+														<table>
+															<thead>
+																<tr>
+																	<th>Name</th>
+																	<th>Description</th>
+																	<th>Value</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>Graham Value</td>
+																	<td>Benjamin Graham Formula</td>
+																	<td>{{FB_piv}}</td>
+																</tr>
+																<tr>
+																	<td>Enterprise Value</td>
+																	<td>Determines equity market capitalization</td>
+																	<td>{{FB_ev}}</td>
+																</tr>
+																<tr>
+																	<td>Book Value</td>
+																	<td>Sum of all assets</td>
+																	<td>{{FB_book}}</td>
+																</tr>
+																<tr>
+																	<td>Earnings Value</td>
+																	<td>Values P/E and EPS based off industry</td>
+																	<td>{{FB_earnings}}</td>
+																</tr>
+																<tr>
+																	<td>Cash Flow Value</td>
+																	<td>Values Free Cash Flow</td>
+																	<td>{{FB_cashflow}}</td>
+																</tr>
+																<tr>
+																	<td>Sales Value</td>
+																	<td>Indicates the growth in sales and revenue</td>
+																	<td>{{FB_sales}}</td>
+																</tr>
+															</tbody>
+															<tfoot>
+																<tr>
+																	<td><strong>Average</strong></td>
+																	<td colspan="1"></td>
+																	<td><strong>{{FB_avg}}</strong></td>
+																</tr>
+															</tfoot>
+														</table>
+													</div>
+													<hr class = "major" />
+									<!-- Table -->
+													<h3>Valuations By Weight</h3>
+
+													<div class="table-wrapper">
+														<table>
+															<thead>
+																<tr>
+																	<th>Name</th>
+																	<th>Weightage</th>
+																	<th>Weighted Value</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>Graham Value</td>
+																	<td>10 percent</td>
+																	<td>{{FB_graham_w}}</td>
+																</tr>
+																<tr>
+																	<td>Enterprise Value</td>
+																	<td>5 percent</td>
+																	<td>{{FB_ev_w}}</td>
+																</tr>
+																<tr>
+																	<td>Book Value</td>
+																	<td> 10 percent</td>
+																	<td>{{FB_book_w}}</td>
+																</tr>
+																<tr>
+																	<td>Earnings Value</td>
+																	<td>25 percent</td>
+																	<td>{{FB_earnings_w}}</td>
+																</tr>
+																<tr>
+																	<td>Cash Flow Value</td>
+																	<td>10 percent</td>
+																	<td>{{FB_cashflow_w}}</td>
+																</tr>
+																<tr>
+																	<td>Sales Value</td>
+																	<td>40 percent</td>
+																	<td>{{FB_sales_w}}</td>
+																</tr>
+															</tbody>
+															<tfoot>
+																<tr>
+																	<td><strong> Weighted Average</strong></td>
+																	<td colspan="1"></td>
+																	<td><strong>{{FB_avg_w}}</strong></td>
+																</tr>
+															</tfoot>
+														</table>
+													</div>
+											<hr class = "major" />
+											<div class="row">
+
+											<!-- Break -->
+											<div class="col-4 col-12-medium">
+												<h3>Current Stock Price</h3>
+												<h1>{{FB_price}}</h1>
+											</div>
+											<div class="col-4 col-12-medium">
+												<h3>My Fair Value</h3>
+												<h1>${{FB_avg_w}}</h1>
+											</div>
+											<div class="col-4 col-12-medium">
+												<h3> Fair Value w/ Margin of Safety</h3>
+												<h1>${{FB_margin}}</h1>
+
+											</div>
+										</div>
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="{% url 'home' %}">Home</a></li>
+										<li><a href="/aboutme">About Me</a></li>
+										<li><a href="/analysis">How I Analyze</a></li>
+										<li>
+											<span class="opener">The Big 5</span>
+											<ul>
+												<li><a href="/goog">Google</a></li>
+												<li><a href="/msft">Microsoft</a></li>
+												<li><a href="/amzn">Amazon</a></li>
+												<li><a href="/aapl">Apple</a></li>
+												<li><a href="/fb">Facebook</a></li>
+
+											</ul>
+										</li>
+										<!-- <li><a href="#">Etiam Dolore</a></li>
+										<li><a href="#">Adipiscing</a></li>
+										<li>
+											<span class="opener">Another Submenu</span>
+											<ul>
+												<li><a href="#">Lorem Dolor</a></li>
+												<li><a href="#">Ipsum Adipiscing</a></li>
+												<li><a href="#">Tempus Magna</a></li>
+												<li><a href="#">Feugiat Veroeros</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Maximus Erat</a></li>
+										<li><a href="generic.html">Generic</a></li>
+										<li><a href="elements.html">Elements</a></li>
+										<li><a href="#">Sapien Mauris</a></li>
+										<li><a href="#">Amet Lacinia</a></li> -->
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<!-- <section>
+									<header class="major">
+										<h2>Check Out My Blogs!</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="#" class="image"><img src="{% static 'value/images/pic07.jpg' %}" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="{% static 'value/images/pic08.jpg' %}" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+										</article>
+										<article>
+										<a href="#" class="image"><img src="{% static 'value/images/pic09.jpg' %}" alt="" /></a>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+									</article>
+								</div>
+								<ul class="actions">
+									<li><a href="#" class="button">More</a></li>
+								</ul>
+							</section>
+ -->
+							<!-- Section -->
+							<section>
+								<header class="major">
+									<h2>Get in touch</h2>
+								</header>
+								<p>Hi! My name is Mihir Mirchandani. I am the person who coded this website. The purpose of this website is to simplify comapany financials. Through extensive research and applications, I've hand selected the most important factors that contribute to the overall success of companies. Scrutinizing such factors provide insights and greater knowledge as to what you are investing in and whether it's a buy or sell! Good luck to you all and I hope you find this website essential to your portfolio needs.</p>
+								<ul class="contact">
+									<li class="icon solid fa-envelope"><a href="mailto:mihir.mirchandani@hotmail.com">Email me</a></li>
+<!-- 									<li class="icon solid fa-phone">(000) 000-0000</li>
+									<li class="icon solid fa-home">1234 Somewhere Road #8254<br />
+									Nashville, TN 00000-0000</li> -->
+								</ul>
+							</section>
+
+							<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright"> <strong>&copy; Mihir Mirchandani. All rights reserved.</strong> <br> Sources for Data: Yahoo Finance, MSN Money, Macrotrends. Template Design: <a href="https://html5up.net">HTML5 UP</a> <br> Ts and Cs: <a href="/terms">Terms</a></p>
+							</footer>
+
+				</div>
+		</div>
+	</div>
+		<script src="{% static 'value/assets/js/jquery.min.js' %}"></script>
+		<script src="{% static 'value/assets/js/browser.min.js' %}"></script>
+		<script src="{% static 'value/assets/js/breakpoints.min.js' %}"></script>
+		<script src="{% static 'value/assets/js/util.js' %}"></script>
+		<script src="{% static 'value/assets/js/main.js' %}"></script>
+
+	</body>
+</html>
