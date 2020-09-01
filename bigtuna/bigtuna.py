@@ -375,7 +375,7 @@ aapl_book = float("{:.2f}".format((float(data[5][62]) * float(data[5][100]))))
 msft_ebitda = float(data[1][51].split('T')[0]) * 1000 / float(data[1][58].split('B')[0])
 fb_ebitda = float(data[2][51].split('B')[0]) / float(data[2][58].split('B')[0])
 amzn_ebitda = float(data[3][51].split('T')[0]) * 1000 / float(data[3][58].split('B')[0])
-goog_ebitda = float(data[4][51].split('B')[0]) / float(data[4][58].split('B')[0])
+goog_ebitda = float(data[4][51].split('T')[0]) * 1000 / float(data[4][58].split('B')[0])
 aapl_ebitda = float(data[5][51].split('T')[0]) * 1000 / float(data[5][58].split('B')[0])
 
 avg = (msft_ebitda) + (fb_ebitda) + (amzn_ebitda) + (goog_ebitda) + (aapl_ebitda)
@@ -482,3 +482,6 @@ with open("/home/pi/mihir/bigtuna/Results.csv", "w") as file:
     #AAPL
     writer.writerow(['AAPL', aapl_piv, aapl_fiv, aapl_earnings, aapl_sales, aapl_book, aapl_ev,aapl_cashflow , float(aapl_piv) * 0.1, float(aapl_earnings) * 0.25, float(aapl_sales) * 0.4, float(aapl_book) * .1, float(aapl_ev) * .05, float(aapl_cashflow) * .1, aapl_avg,  aapl_weighted_avg, aapl])
     #writer.writerow([])
+
+
+os.system("/usr/bin/scp /home/pi/mihir/bigtuna/Results.csv mihirm@ssh.pythonanywhere.com:valuemealstocks/")
